@@ -6,8 +6,8 @@ services:
     ports:
       - 50:3000
     working_dir: /app
-    volumes:
-      - ./app1/:/app
+#    volumes:
+#      - ./app1/:/app
     environment:
       MYSQL_HOST: mysql1
       MYSQL_USER: root
@@ -22,8 +22,8 @@ services:
     ports:
       - 60:3000
     working_dir: /app
-    volumes:
-      - ./app2/:/app
+#    volumes:
+#      - ./app2/:/app
     environment:
       MYSQL_HOST: mysql1
       MYSQL_USER: root
