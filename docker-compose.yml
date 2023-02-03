@@ -6,8 +6,8 @@ services:
     ports:
       - 50:3000
     working_dir: /app
-#    volumes:
-#      - ./app1/:/app
+    volumes:
+      - ./app1/:/app
     environment:
       MYSQL_HOST: mysql1
       MYSQL_USER: root
@@ -22,8 +22,8 @@ services:
     ports:
       - 60:3000
     working_dir: /app
-#    volumes:
-#      - ./app2/:/app
+    volumes:
+      - ./app2/:/app
     environment:
       MYSQL_HOST: mysql1
       MYSQL_USER: root
@@ -42,16 +42,6 @@ services:
       MYSQL_DATABASE: todos
     networks:
       - app_network
-
-  # mysql2:
-  #   image: mysql:8.0
-  #   volumes:
-  #     - todo-mysql-data2:/var/lib/mysql
-  #   environment:
-  #     MYSQL_ROOT_PASSWORD: secret2
-  #     MYSQL_DATABASE: todos
-  #   networks:
-  #     - app_network
 
   nginx:
     image: nginx:latest
